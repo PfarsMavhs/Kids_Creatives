@@ -39,7 +39,7 @@ public class Kid {
 	    private String profilePic;
 
 	    //additional information
-	/*	@Column(name="allergies")
+		@Column(name="allergies")
 	    private String allergies;
 	    @Column(name="diet_requirements")
 		private String dietRequirements;
@@ -47,54 +47,11 @@ public class Kid {
 	    private String doctorsRecomendations;
 	    @Column(name="kid_height")
 	    private int kidHeight;
-	    @Column(name="body_weight")
-	    private int bodyWeight;*/
+	    @Column(name="kid_weight")
+	    private int bodyWeight;
 	
 	    
-	    
-	    public Kid(long teachersId, String name, String surname, String address, long idNumber,
-				long parentid, String gender, String orgName, String kidsGrade, String kidsRegistered,
-				String profilePic) {
-			super();
-			this.teachersId = teachersId;
-			this.name = name;
-			this.surname = surname;
-			this.address = address;
-			this.idNumber = idNumber;
-			this.parentid = parentid;
-			this.gender = gender;
-			this.orgName = orgName;
-			this.kidsGrade = kidsGrade;
-			this.kidsRegistered = kidsRegistered;
-			this.profilePic = profilePic;
-		}
-
-		public Kid(int id, 
-long teachersId, String name, String surname, String address, Long idNumber,
-				Long parentid, String gender, String orgName, String kidsGrade, String kidsRegistered,
-				String profilePic, String allergies, String dietRequirements, String doctorsRecomendations,
-				int kidHeight, int bodyWeight) {
-			super();
-			this.id = id;
-			this.teachersId = teachersId;
-			this.name = name;
-			this.surname = surname;
-			this.address = address;
-			this.idNumber = idNumber;
-			this.parentid = parentid;
-			this.gender = gender;
-			this.orgName = orgName;
-			this.kidsGrade = kidsGrade;
-			this.kidsRegistered = kidsRegistered;
-			this.profilePic = profilePic;
-			//this.allergies = allergies;
-			//this.dietRequirements = dietRequirements;
-			//this.doctorsRecomendations = doctorsRecomendations;
-			//this.kidHeight = kidHeight;
-			//this.bodyWeight = bodyWeight;
-		}
-
-		public int getId() {
+	  	public int getId() {
 			return id;
 		}
 
@@ -167,7 +124,7 @@ long teachersId, String name, String surname, String address, Long idNumber,
 		public void setProfilePic(String profilePic) {
 			this.profilePic = profilePic;
 		}
-		/*public String getAllergies() {
+		public String getAllergies() {
 			return allergies;
 		}
 		public void setAllergies(String allergies) {
@@ -196,7 +153,7 @@ long teachersId, String name, String surname, String address, Long idNumber,
 		}
 		public void setBodyWeight(int bodyWeight) {
 			this.bodyWeight = bodyWeight;
-		}*/
+		}
 	    
 	    
 }

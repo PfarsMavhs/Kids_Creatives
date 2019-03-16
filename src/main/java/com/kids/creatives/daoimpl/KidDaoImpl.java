@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -14,12 +15,14 @@ import com.kids.creatives.entities.Kid;
 public class KidDaoImpl implements KidDao {
 
 	@Autowired
-	SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
 	
 	@Override
 	public void saveKids(Kid kid) {
 		
 		Session session = sessionFactory.getCurrentSession();
+		
+		session.saveOrUpdate(kid);
 		
 	}
 
@@ -28,7 +31,11 @@ public class KidDaoImpl implements KidDao {
 
 		Session session = sessionFactory.getCurrentSession();
 		
-		return null;
+		Query<Kid> kidsQuery = session.createQuery("from Kid order by name",Kid.class);
+		
+		List<Kid> kidsResults  = kidsQuery.getResultList();
+		
+		return kidsResults;
 	}
 
 	@Override
@@ -36,7 +43,9 @@ public class KidDaoImpl implements KidDao {
 
 		Session session = sessionFactory.getCurrentSession();
 		
-		return null;
+		Kid kid = session.get(Kid.class, id);
+		
+		return kid;
 	}
 
 	@Override
@@ -44,7 +53,10 @@ public class KidDaoImpl implements KidDao {
 
 		Session session = sessionFactory.getCurrentSession();
 		
-		return null;
+		Query<Kid> parentKidQuery = session.createQuery("from Kid where parentid = "+parentId+" ",Kid.class);
+		
+		List<Kid> kids = parentKidQuery.getResultList();
+		return kids;
 	}
 
 }
