@@ -5,10 +5,12 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.annotations.Parent;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.kids.creatives.dao.ParentsDAO;
+import com.kids.creatives.entities.Parents;
 
 @Repository
 public class ParentDaoImpl implements ParentsDAO {
@@ -17,26 +19,34 @@ public class ParentDaoImpl implements ParentsDAO {
 	SessionFactory sessionFactory;
 	
 	@Override
-	public void addParents(Parent parent) {
+	public void addParents(Parents parent) {
 		
 		Session session = sessionFactory.getCurrentSession();
+		
+		session.saveOrUpdate(parent);
 		
 	}
 
 	@Override
-	public List<Parent> getParents(Parent parent) {
+	public List<Parents> getParents() {
 
 		Session session = sessionFactory.getCurrentSession();
 		
-		return null;
+		Query<Parents> parentQuery = session.createQuery("from Parents",Parents.class);
+		
+		List<Parents> parentsList  = parentQuery.getResultList();
+		
+				
+		return parentsList;
 	}
 
 	@Override
-	public Parent getParent(Parent parent) {
+	public Parents getParent(int userId) {
 		
 		Session session = sessionFactory.getCurrentSession();
 		
-		return null;
+		Parents parents = session.get(Parents.class, userId);
+		return parents;
 	}
 
 }

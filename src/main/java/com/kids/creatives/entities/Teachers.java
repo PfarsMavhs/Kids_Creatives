@@ -48,28 +48,7 @@ public class Teachers {
 	@Column(name="teacher_org_id")
     private int userOrgId;
 	
-	public Teachers(String userName, String userSurname, long userContact, String teacherClassroom,
-			long userIdNumber, String userGender, String emailUser, String passWordUser, String role,
-			String isVerified, String orgName, String userAddress, String userProvince, String userCity,
-			String userProfilePic, int userOrgId) {
-		super();
-		this.userName = userName;
-		this.userSurname = userSurname;
-		this.userContact = userContact;
-		this.teacherClassroom = teacherClassroom;
-		this.userIdNumber = userIdNumber;
-		this.userGender = userGender;
-		this.emailUser = emailUser;
-		this.passWordUser = passWordUser;
-		this.role = role;
-		this.isVerified = isVerified;
-		this.orgName = orgName;
-		this.userAddress = userAddress;
-		this.userProvince = userProvince;
-		this.userCity = userCity;
-		this.userProfilePic = userProfilePic;
-		this.userOrgId = userOrgId;
-	}
+
 
 	public int getUserKey() {
 		return userKey;

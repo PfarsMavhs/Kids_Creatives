@@ -36,23 +36,6 @@ public class Organization {
 	@Column(name="org_postal_code")
     private int orgPostalCode;
 	
-	
-	
-	public Organization(String orgname, String orgAddress, String orgCity, String orgProvince,
-			String orgEmail, long orgPhoneNo, String orgPassword, int adminKey, int orgRegNumber,
-			int orgPostalCode) {
-		super();
-		this.orgname = orgname;
-		this.orgAddress = orgAddress;
-		this.orgCity = orgCity;
-		this.orgProvince = orgProvince;
-		this.orgEmail = orgEmail;
-		this.orgPhoneNo = orgPhoneNo;
-		this.orgPassword = orgPassword;
-		this.adminKey = adminKey;
-		this.orgRegNumber = orgRegNumber;
-		this.orgPostalCode = orgPostalCode;
-	}
 	public int getUid() {
 		return uid;
 	}

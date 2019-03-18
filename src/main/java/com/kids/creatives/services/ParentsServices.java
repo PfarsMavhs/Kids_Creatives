@@ -2,11 +2,11 @@ package com.kids.creatives.services;
 
 import java.util.List;
 
-import org.hibernate.annotations.Parent;
+import com.kids.creatives.entities.Parents;
 
 public interface ParentsServices {
 
-	public void addParents(Parent parent);
-	public List<Parent> getParents(Parent parent);
-	public Parent getParent(Parent parent);
+	public void addParents(Parents parent);
+	public List<Parents> getParents();
+	public Parents getParent(int userId);
 }

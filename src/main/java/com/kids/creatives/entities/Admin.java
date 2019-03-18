@@ -36,21 +36,7 @@ public class Admin {
 	@Column(name="admin_org_id")
     private int userOrgId;
 	
-	public Admin(String adminName, String adminSurname, long adminIdNo, String adminGender,
-			long adminContact, String adminRole, String email, String orgName, String userCity, int userOrgId) {
-		super();
-		
-		this.adminName = adminName;
-		this.adminSurname = adminSurname;
-		this.admin_id_No = adminIdNo;
-		this.adminGender = adminGender;
-		this.adminContact = adminContact;
-		this.adminRole = adminRole;
-		this.email = email;
-		this.orgName = orgName;
-		this.userCity = userCity;
-		this.userOrgId = userOrgId;
-	}
+
 	public int getAdminUid() {
 		return adminUid;
 	}

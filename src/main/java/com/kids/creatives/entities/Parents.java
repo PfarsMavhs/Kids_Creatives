@@ -15,45 +15,40 @@ public class Parents {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int userId;
+	
 	@Column(name="parent_name")
     private String userName;
+	
 	@Column(name="parent_surname")
     private String userSurname;
+	
 	@Column(name="parent_id_number")
     private long userIdNumber;
+	
 	@Column(name="parent_address")
     private String userAddress;
+	
 	@Column(name="parent_province")
     private String userprovince;
+	
 	@Column(name="parent_city")
     private String userCity;
+	
 	@Column(name="parent_contact")
     private long userContact;
+	
 	@Column(name="parent_gender")
     private String userGender;
+	
 	@Column(name="is_verified")
     private String isVerified;
+	
 	@Column(name="parent_profile_pic")
     private String userProfilePic;
+	
 	@Column(name="parent_org_id")
     private int userOrgId;
 	
-	public Parents(String userName, String userSurname, long userIdNumber, String userAddress,
-			String userprovince, String userCity, long userContact, String userGender, String isVerified,
-			String userProfilePic, int userOrgId) {
-		super();
-		this.userName = userName;
-		this.userSurname = userSurname;
-		this.userIdNumber = userIdNumber;
-		this.userAddress = userAddress;
-		this.userprovince = userprovince;
-		this.userCity = userCity;
-		this.userContact = userContact;
-		this.userGender = userGender;
-		this.isVerified = isVerified;
-		this.userProfilePic = userProfilePic;
-		this.userOrgId = userOrgId;
-	}
 	public int getUserId() {
 		return userId;
 	}
