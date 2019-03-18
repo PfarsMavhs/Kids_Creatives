@@ -8,10 +8,10 @@ import org.hibernate.annotations.Parent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.kids.creatives.dao.ParentsDao;
+import com.kids.creatives.dao.ParentsDAO;
 
 @Repository
-public class ParentDaoImpl implements ParentsDao {
+public class ParentDaoImpl implements ParentsDAO {
 
 	@Autowired
 	SessionFactory sessionFactory;

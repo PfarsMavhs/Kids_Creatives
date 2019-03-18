@@ -8,11 +8,11 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.kids.creatives.dao.KidDao;
+import com.kids.creatives.dao.KidDAO;
 import com.kids.creatives.entities.Kid;
 
 @Repository
-public class KidDaoImpl implements KidDao {
+public class KidDaoImpl implements KidDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;

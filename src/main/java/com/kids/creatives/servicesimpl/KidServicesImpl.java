@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kids.creatives.dao.KidDao;
+import com.kids.creatives.dao.KidDAO;
 import com.kids.creatives.entities.Kid;
 import com.kids.creatives.services.KidServices;
 
@@ -14,7 +14,7 @@ import com.kids.creatives.services.KidServices;
 public class KidServicesImpl implements KidServices{
 
 	@Autowired
-	KidDao kidDAO;
+	KidDAO kidDAO;
 	
 	@Override
 	@Transactional

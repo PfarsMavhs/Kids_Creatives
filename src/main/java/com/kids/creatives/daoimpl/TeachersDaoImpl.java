@@ -7,11 +7,11 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.kids.creatives.dao.TeachersDao;
+import com.kids.creatives.dao.TeachersDAO;
 import com.kids.creatives.entities.Teachers;
 
 @Repository
-public class TeachersDaoImpl implements TeachersDao {
+public class TeachersDaoImpl implements TeachersDAO {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
