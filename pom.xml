@@ -12,6 +12,7 @@
 		<mysql.connector.version>5.1.45</mysql.connector.version>
 		<springsecurity.version>5.0.5.RELEASE</springsecurity.version>
 		<c3po.version>0.9.5.2</c3po.version>
+		<springfox-swagger.version>2.9.2</springfox-swagger.version>
 		
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -106,6 +107,20 @@
 		    <groupId>javax.xml.bind</groupId>
 		    <artifactId>jaxb-api</artifactId>
 		    <version>2.3.0</version>
+		</dependency>
+		
+		<!--  swagger -->
+		<dependency>
+    		<groupId>io.springfox</groupId>
+    		<artifactId>springfox-swagger2</artifactId>
+    		<version>${springfox-swagger.version}</version>
+		</dependency>
+
+		
+		<dependency>
+   			 <groupId>io.springfox</groupId>
+    		<artifactId>springfox-swagger-ui</artifactId>
+   			 <version>${springfox-swagger.version}</version>
 		</dependency>
 
 	</dependencies>
