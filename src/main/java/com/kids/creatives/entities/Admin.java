@@ -15,24 +15,34 @@ public class Admin {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int adminUid;
+	
 	@Column(name="admin_name")
     private String adminName;
+	
 	@Column(name="admin_surname")
     private String adminSurname;
+	
 	@Column(name="admin_id_no")
     private long admin_id_No;
+	
 	@Column(name="admin_gender")
     private String adminGender;
+	
 	@Column(name="admin_contact")
     private long adminContact;
+	
 	@Column(name="admin_role")
     private String adminRole;
+	
 	@Column(name="admin_email")
     private String email;
+	
 	@Column(name="admin_org_name")
     private String orgName;
+	
 	@Column(name="admin_city")
     private String userCity;
+	
 	@Column(name="admin_org_id")
     private int userOrgId;
 	

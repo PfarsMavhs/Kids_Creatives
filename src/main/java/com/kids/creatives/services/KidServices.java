@@ -9,6 +9,6 @@ public interface KidServices {
 	public void saveKids(Kid kid);
 	public List<Kid> kidsResults();
 	public Kid getKid(int id);
-	public List<Kid> parentsKids(int parentId);
+	//public List<Kid> parentsKids(int )parentId;
 
 }

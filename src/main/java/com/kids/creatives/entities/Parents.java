@@ -1,10 +1,14 @@
 package com.kids.creatives.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -25,14 +29,11 @@ public class Parents {
 	@Column(name="parent_id_number")
     private long userIdNumber;
 	
-	@Column(name="parent_address")
-    private String userAddress;
+	@Column(name="parent_email")
+	private String email;
 	
 	@Column(name="parent_province")
     private String userprovince;
-	
-	@Column(name="parent_city")
-    private String userCity;
 	
 	@Column(name="parent_contact")
     private long userContact;
@@ -41,13 +42,17 @@ public class Parents {
     private String userGender;
 	
 	@Column(name="is_verified")
-    private String isVerified;
+    private int isVerified;
 	
 	@Column(name="parent_profile_pic")
     private String userProfilePic;
 	
 	@Column(name="parent_org_id")
     private int userOrgId;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="address_details_id", nullable=false)
+	private Address address;
 	
 	public int getUserId() {
 		return userId;
@@ -73,24 +78,14 @@ public class Parents {
 	public void setUserIdNumber(long userIdNumber) {
 		this.userIdNumber = userIdNumber;
 	}
-	public String getUserAddress() {
-		return userAddress;
-	}
-	public void setUserAddress(String userAddress) {
-		this.userAddress = userAddress;
-	}
+	
 	public String getUserprovince() {
 		return userprovince;
 	}
 	public void setUserprovince(String userprovince) {
 		this.userprovince = userprovince;
 	}
-	public String getUserCity() {
-		return userCity;
-	}
-	public void setUserCity(String userCity) {
-		this.userCity = userCity;
-	}
+
 	public long getUserContact() {
 		return userContact;
 	}
@@ -103,10 +98,10 @@ public class Parents {
 	public void setUserGender(String userGender) {
 		this.userGender = userGender;
 	}
-	public String getIsVerified() {
+	public int getIsVerified() {
 		return isVerified;
 	}
-	public void setIsVerified(String isVerified) {
+	public void setIsVerified(int isVerified) {
 		this.isVerified = isVerified;
 	}
 	public String getUserProfilePic() {
@@ -121,7 +116,19 @@ public class Parents {
 	public void setUserOrgId(int userOrgId) {
 		this.userOrgId = userOrgId;
 	}
-    
+	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
     
 	
  

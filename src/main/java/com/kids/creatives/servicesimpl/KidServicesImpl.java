@@ -37,11 +37,11 @@ public class KidServicesImpl implements KidServices{
 		return kidDAO.getKid(id);
 	}
 
-	@Override
+	/*@Override
 	@Transactional
 	public List<Kid> parentsKids(int parentId) {
 		
 		return kidDAO.parentsKids(parentId);
-	}
+	}*/
 
 }

@@ -4,13 +4,14 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.annotations.Parent;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.kids.creatives.dao.ParentsDAO;
+import com.kids.creatives.entities.Address;
 import com.kids.creatives.entities.Parents;
+
 
 @Repository
 public class ParentDaoImpl implements ParentsDAO {
@@ -21,9 +22,13 @@ public class ParentDaoImpl implements ParentsDAO {
 	@Override
 	public void addParents(Parents parent) {
 		
+		Address address = new Address();
+		
+		parent.setAddress(address);
+		
 		Session session = sessionFactory.getCurrentSession();
 		
-		session.saveOrUpdate(parent);
+		session.save(parent);
 		
 	}
 
@@ -35,8 +40,7 @@ public class ParentDaoImpl implements ParentsDAO {
 		Query<Parents> parentQuery = session.createQuery("from Parents",Parents.class);
 		
 		List<Parents> parentsList  = parentQuery.getResultList();
-		
-				
+						
 		return parentsList;
 	}
 
@@ -45,7 +49,11 @@ public class ParentDaoImpl implements ParentsDAO {
 		
 		Session session = sessionFactory.getCurrentSession();
 		
-		Parents parents = session.get(Parents.class, userId);
+		Query<Parents> theQuery = session.createQuery("from Parents where id=:uid", Parents.class);
+		theQuery.setParameter("uid", userId);
+		
+		Parents parents = theQuery.getSingleResult();
+				
 		return parents;
 	}
 

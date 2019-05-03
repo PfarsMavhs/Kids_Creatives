@@ -37,7 +37,7 @@ public class ParentsController {
 	@PostMapping("/parents")
 	public Parents saveParents(@RequestBody Parents parent) {
 		
-		parent.setUserId(0);
+		//parent.setUserId(0);
 		
 		 parentService.addParents(parent);
 		 

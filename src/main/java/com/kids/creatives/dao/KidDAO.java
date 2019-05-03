@@ -11,7 +11,7 @@ public interface KidDAO {
 	public List<Kid> getKids();
 	public Kid getKid(int id);
 	
-	public List<Kid> parentsKids(int parentId);
+	//public List<Kid> parentsKids(int parentId);
 	
 	
 }

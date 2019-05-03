@@ -47,7 +47,7 @@ public class KidDaoImpl implements KidDAO {
 		
 		return kid;
 	}
-
+/*
 	@Override
 	public List<Kid> parentsKids(int parentId) {
 
@@ -58,5 +58,5 @@ public class KidDaoImpl implements KidDAO {
 		List<Kid> kids = parentKidQuery.getResultList();
 		return kids;
 	}
-
+*/
 }

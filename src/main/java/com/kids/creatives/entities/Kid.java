@@ -15,26 +15,37 @@ public class Kid {
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		@Column(name="id")
 		private int id;
+		
 		@Column(name="teachers_id")
 	    private long teachersId;
+		
 		@Column(name="kid_name")
 	    private String name;
+		
 		@Column(name="kid_surname")
 	    private String surname;
+		
 		@Column(name="kid_address")
 	    private String address;
+		
 		@Column(name="kid_id_number")
 	    private Long idNumber;
+		
 		@Column(name="kid_parent_id")
 	    private Long parentid;
+		
 		@Column(name="kid_gender")
 	    private String gender;
+		
 		@Column(name="kid_org_name")
 	    private String orgName;
+		
 		@Column(name="kid_grade")
 	    private String kidsGrade;
+		
 		@Column(name="kid_registered")
 	    private String kidsRegistered;
+		
 		@Column(name="kid_profile_pic")
 	    private String profilePic;
 
